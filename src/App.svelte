@@ -42,5 +42,15 @@
 		<button on:click={searchWord}>Search</button>
 	</div>
 </div>
+{#if loading==true|| wordData!=null}
+<div class="result">
+	{
+		#if wordData!=null && typeof wordData!='string'
+	}
+
+	{
+		:else if wordData==null  && loading ==true
+	}
+</div>
 </div>
 <main></main>
