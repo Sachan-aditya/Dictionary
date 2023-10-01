@@ -1,6 +1,7 @@
 <script>
 	import Loader from "./Loader.svelte";
-	import  wordData from "./WordData.svelte"
+    import WordData from "./WordData.svelte";
+	
 	let word = "";
 	let loading = false;
 	let wordData = null;
@@ -44,7 +45,7 @@
 	{#if loading == true || wordData != null}
 	  <div class="result">
 		{#if wordData != null && typeof wordData !== 'string'}
-		  <p>Found Data</p>
+	<WordData wordData={wordData}/>
 		{:else if wordData === null && loading === true}
 		  <Loader />
 		{:else}
