@@ -1,5 +1,6 @@
 <script>
 	import Loader from "./Loader.svelte";
+	import  wordData from "./WordData.svelte"
 	let word = "";
 	let loading = false;
 	let wordData = null;

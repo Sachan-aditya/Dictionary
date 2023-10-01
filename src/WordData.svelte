@@ -1,6 +1,9 @@
 <script>
-
-
+export let wordData=null;
+function playAudio(src){
+let audio=new Audio(src);
+audio.play();
+}
 </script>
 <style></style>
 <div class="word-data">
@@ -31,7 +34,7 @@
             <div class="definitions">
                 <p>Definitions:<b>{data.definitions}</b></p>
                 {#if data.example}
-            <p>Example:</p>
+            <p>Example:<i>{data.example}</i></p>
                 {/if}
             </div>
             {
