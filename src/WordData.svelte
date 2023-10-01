@@ -14,7 +14,7 @@
     <div class="audios">
       {#each wordData.phonetics as data}
       <div class="audios">
-        <p>{data.text} <button on:click={() => playAudio(data.audio)} on:keydown={(e) => e.key === 'Enter' && playAudio(data.audio)} tabindex="0"><i class="fa fa.play-circle"></i></button></p>
+        <p>{data.text}<i>class ="fa fa play-circle" <button on:click={() => playAudio(data.audio)} on:keydown={(e) => e.key === 'Enter' && playAudio(data.audio)} tabindex="0"></button></p>
       </div>
       {/each}
     </div>
@@ -22,11 +22,11 @@
   
     {#each wordData.meanings as meaning}
     <div class="meaning">
-      <div class="part-of-speech">&bull; {meaning.partofSpeech}</div>
+      <div class="part-of-speech">&bull; {meaning.partOfSpeech}</div>
       <div class="definitions">
         {#each meaning.definitions as data}
         <div class="definitions">
-          <p>Definitions: <b>{data.definitions}</b></p>
+          <p>Definitions: <b>{data.definition}</b></p>
           {#if data.example}
           <p>Example: <i>{data.example}</i></p>
           {/if}
