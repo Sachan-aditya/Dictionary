@@ -29,8 +29,39 @@
   </script>
   
   <style>
-	/* Add your styles here */
+	.header{
+  width:100%;padding: 20px;
+  background: #111;
+  color: #f5f5f5;
+  font-size: 20px;
+  text-align: center;
+
+}
+.center{
+  margin:40px auto;
+  width: 95%;max-width: 550px;
+  background: #fff;
+}
+.form{
+  background: #fff;padding: 20 px;
+  border: 1px;solid #f5f5f5;
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0,05);
+  margin: 20px 0px;
+}
+.form .form-group{
+  margin:10px 0px
+}
+.form .form-group label {
+	display: :block;
+	font-size:16px;
+	margin-bottom:8px;
+}
+.form .form-group input{
+	
+}
   </style>
+  
+
   
   <div class="header">Dictionary App</div>
   <div class="center">
