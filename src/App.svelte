@@ -45,12 +45,17 @@
 {#if loading==true|| wordData!=null}
 <div class="result">
 	{
-		#if wordData!=null && typeof wordData!='string'
+		#if wordData!=null && typeof wordData!=='string'
 	}
-
+ <p>Found Data</p>
 	{
-		:else if wordData==null  && loading ==true
+		:else if wordData===null  && loading ===true
 	}
+	<Loader/>
+	{:else}
+      <pclass="padding">No result</p>
+	{/if}
 </div>
+{/if}
 </div>
 <main></main>
