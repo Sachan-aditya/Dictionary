@@ -19,4 +19,25 @@
     {
         /if
     }
+    {
+    #each wordData.meanings as meaning
+    }
+    <div class="meaning">
+        <div class="part-of-speech">&bull; {meaning.partofSpeech}</div>
+        <div class="definitions">
+            {
+            #each meaning.definitions as data
+            }
+            <div class="definitions">
+                <p>Definitions:<b>{data.definitions}</b></p>
+                {#if data.example}
+            <p>Example:</p>
+                {/if}
+            </div>
+            {
+                /each
+            }
+        </div>
+    </div>
+    {/each}
 </div>
