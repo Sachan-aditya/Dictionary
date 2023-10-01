@@ -21,6 +21,7 @@
 		} else {
 		  wordData = "No Result";
 		}
+		loading=false;
 	  } catch (err) {
 		loading = false;
 	  }
@@ -35,14 +36,15 @@
   <div class="center">
 	<div class="form">
 	  <div class="form-group">
-		<label for="Search Word"></label>
+		<!-- svelte-ignore a11y-label-has-associated-control -->
+		<label>Search Word</label>
 		<input type="text" placeholder="Type word here" bind:value={word} />
 	  </div>
 	  <div class="form-group">
 		<button on:click={searchWord}>Search</button>
 	  </div>
 	</div>
-	{#if loading == true || wordData != null}
+	{#if loading === true || wordData != null}
 	  <div class="result">
 		{#if wordData != null && typeof wordData !== 'string'}
 	<WordData wordData={wordData}/>
