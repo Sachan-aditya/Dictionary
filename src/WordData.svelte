@@ -14,7 +14,7 @@
     <div class="audios">
       {#each wordData.phonetics as data}
       <div class="audios">
-        <p>{data.text}<i>class ="fa fa play-circle" <button on:click={() => playAudio(data.audio)} on:keydown={(e) => e.key === 'Enter' && playAudio(data.audio)} tabindex="0"></button></p>
+        <p>{data.text}<i>class ="fa fa play-circle" <button on:click={() => playAudio(data.audio)} on:keydown={(e) => e.key === 'Enter' && playAudio(data.audio)} on:keydown={(e) => e.key === 'Enter' && playAudio(data.audio)} on:keydown={(e) => e.key === 'Enter' && playAudio(data.audio)} tabindex="0"></button></p>
       </div>
       {/each}
     </div>

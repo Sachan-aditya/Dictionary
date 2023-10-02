@@ -1,7 +1,7 @@
-<!-- Loader.svelte -->
+
 
 <script>
-    export let message = "Loading..."; // You can customize the loading message
+    export let message = "Loading...";
 </script>
 
 <style>
@@ -20,7 +20,7 @@
         transform: translate(-50%, -50%);
         width: 50px;
         height: 50px;
-        background-color: #3498db; /* Change the color as needed */
+        background-color: greenyellow; 
         border-radius: 50%;
         animation: bouncing 1s infinite alternate;
     }
