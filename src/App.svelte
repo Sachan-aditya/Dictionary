@@ -46,6 +46,18 @@
         box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
         padding: 20px;
     }
+    .made-with-love {
+        position: absolute;
+        bottom: 90%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 100%;
+        background: #4caf50;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        animation: marquee 15s linear infinite;
+    }
 
     .form {
         background:whitesmoke;
@@ -116,3 +128,4 @@
     </div>
     {/if}
 </div>
+<div class="made-with-love">Made by Aditya Sachan</div>

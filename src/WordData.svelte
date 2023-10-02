@@ -8,7 +8,45 @@
 </script>
 
 <style>
-  /* Add your styling here */
+  .word-data {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  .audios {
+    margin-bottom: 10px;
+  }
+
+  button {
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .meaning {
+    margin-top: 15px;
+  }
+
+  .part-of-speech {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .definitions {
+    margin-left: 15px;
+  }
+
+  b {
+    color: #3498db;
+  }
+
+  i {
+    color: #27ae60;
+  }
 </style>
 
 <div class="word-data">
@@ -16,7 +54,7 @@
     <div class="audios">
       {#each wordData.phonetics as data}
         <div class="audios">
-          <p>{data.text}<i><button on:click={() => playAudio(data.audio)} on:keydown={(e) => e.key === 'Enter' && playAudio(data.audio)} tabindex="0">Speaker</button></i></p>
+          <p>{data.text} <i><button on:click={() => playAudio(data.audio)} tabindex="0">Speaker</button></i></p>
         </div>
       {/each}
     </div>
