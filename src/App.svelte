@@ -5,7 +5,6 @@
     let word = "";
     let loading = false;
     let wordData = null;
-    let fadeIn = false;
 
     async function searchWord() {
         if (word.length === 0) {
@@ -33,7 +32,7 @@
     .header {
         width: 100%;
         padding: 20px;
-        background: linear-gradient(to right, #4caf50, #2196F3); /* Add gradient background */
+        background: black;
         color: #f5f5f5;
         font-size: 20px;
         text-align: center;
@@ -43,19 +42,13 @@
         margin: 40px auto;
         width: 95%;
         max-width: 550px;
-        background: linear-gradient(to right, #ffffff, #f2f2f2); /* Add gradient background */
+        background: #fff;
         box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
         padding: 20px;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-    }
-
-    .center.fadeIn {
-        opacity: 1;
     }
 
     .form {
-        background: linear-gradient(to right, #ffffff, #e0e0e0); /* Add gradient background */
+        background:whitesmoke;
         padding: 20px;
         border: 1px solid #f5f5f5;
         box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
@@ -73,6 +66,7 @@
     }
 
     .form .form-group input {
+     
         width: 100%;
         padding: 8px;
         border: 1px solid #111;
@@ -80,6 +74,7 @@
     }
 
     .form .form-group button {
+        
         background-color: #4caf50;
         color: white;
         padding: 8px 16px;
@@ -98,7 +93,7 @@
 </style>
 
 <div class="header">DICTIONARY</div>
-<div class="center" class:fadeIn>
+<div class="center">
     <div class="form">
         <div class="form-group">
             <!-- svelte-ignore a11y-label-has-associated-control -->
