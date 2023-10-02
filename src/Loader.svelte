@@ -1,3 +1,9 @@
+<!-- Loader.svelte -->
+
+<script>
+    export let message = "Loading..."; // You can customize the loading message
+</script>
+
 <style>
     .loader {
         position: relative;
@@ -14,17 +20,21 @@
         transform: translate(-50%, -50%);
         width: 50px;
         height: 50px;
-        border: 2px solid #111;
-        border-left: 2px solid transparent;
+        background-color: #3498db; /* Change the color as needed */
         border-radius: 50%;
-        animation: loading 500ms linear infinite;
+        animation: bouncing 1s infinite alternate;
     }
 
-    @keyframes loading {
+    @keyframes bouncing {
+        0% {
+            transform: translate(-50%, -50%) translateY(0);
+        }
         100% {
-            transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) translateY(20px);
         }
     }
 </style>
 
-<div class="loader"></div>
+<div class="loader">
+    <p>{message}</p>
+</div>
