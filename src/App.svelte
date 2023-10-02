@@ -5,6 +5,7 @@
     let word = "";
     let loading = false;
     let wordData = null;
+    let fadeIn = false;
 
     async function searchWord() {
         if (word.length === 0) {
@@ -32,7 +33,7 @@
     .header {
         width: 100%;
         padding: 20px;
-        background: #111;
+        background: linear-gradient(to right, #4caf50, #2196F3); /* Add gradient background */
         color: #f5f5f5;
         font-size: 20px;
         text-align: center;
@@ -42,13 +43,19 @@
         margin: 40px auto;
         width: 95%;
         max-width: 550px;
-        background: #fff;
+        background: linear-gradient(to right, #ffffff, #f2f2f2); /* Add gradient background */
         box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
         padding: 20px;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .center.fadeIn {
+        opacity: 1;
     }
 
     .form {
-        background: #fff;
+        background: linear-gradient(to right, #ffffff, #e0e0e0); /* Add gradient background */
         padding: 20px;
         border: 1px solid #f5f5f5;
         box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
@@ -66,15 +73,13 @@
     }
 
     .form .form-group input {
-        /* Add your input styles here */
         width: 100%;
         padding: 8px;
-        border: 1px solid #ccc;
+        border: 1px solid #111;
         border-radius: 4px;
     }
 
     .form .form-group button {
-        /* Add your button styles here */
         background-color: #4caf50;
         color: white;
         padding: 8px 16px;
@@ -92,8 +97,8 @@
     }
 </style>
 
-<div class="header">Dictionary App</div>
-<div class="center">
+<div class="header">DICTIONARY</div>
+<div class="center" class:fadeIn>
     <div class="form">
         <div class="form-group">
             <!-- svelte-ignore a11y-label-has-associated-control -->
